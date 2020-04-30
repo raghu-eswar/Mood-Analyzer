@@ -1,7 +1,9 @@
 package com.mood.analyzer_test;
 
+import com.mood.analyzer.MoodAnalyzerFactory;
 import com.mood.analyzer.MoodAnalysisException;
 import com.mood.analyzer.MoodAnalyzer;
+import com.mood.analyzer.MoodAnalyzerFactory;
 import org.junit.Assert;
 import org.junit.Test;
 
@@ -44,4 +46,18 @@ public class MoodAnalyzerTest {
         }
         Assert.assertEquals("HAPPY", mood);
     }
+
+    @Test
+    public void moodAnalyzerObjectCreationTest() throws Exception {
+        MoodAnalyzer moodAnalyzer = MoodAnalyzerFactory.getMoodAnalyzer("com.mood.analyzer.MoodAnalyzer");
+        MoodAnalyzer moodAnalyzer1 = new MoodAnalyzer();
+        boolean isEqual = moodAnalyzer.equals(moodAnalyzer1);
+        Assert.assertEquals(true, isEqual);
+    }
 }
+
+
+
+
+
+
