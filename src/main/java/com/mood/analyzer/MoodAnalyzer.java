@@ -9,11 +9,7 @@ public class MoodAnalyzer {
         NULL,
         EMPTY
     }
-
-    public MoodAnalyzer() {
-        this.mood = "";
-    }
-
+    public MoodAnalyzer() {this.mood = ""; }
     public MoodAnalyzer(String mood) {
         this.mood = mood;
     }
